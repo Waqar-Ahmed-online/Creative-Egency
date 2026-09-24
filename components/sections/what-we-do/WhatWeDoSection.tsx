@@ -90,7 +90,7 @@ export default function WhatWeDoSection() {
   return (
     <section className="relative bg-white text-[#1d1d1d]">
       {/* ---------- Heading ---------- */}
-      <div className="w-full px-5 pb-16 pt-20 sm:pt-28 lg:pb-32">
+      <div className="w-full pl-8 pr-5 pb-16 pt-20 sm:pl-12 sm:pt-28 lg:pl-16 lg:pb-32">
         <span className="inline-flex items-center gap-2 text-base font-medium uppercase sm:text-lg">
           What We Do
           <ArrowUpRight className="h-4 w-4" />
@@ -128,7 +128,7 @@ export default function WhatWeDoSection() {
         }
       >
         {/* Sticky stage */}
-        <div className="w-full px-5 sm:px-[34px] lg:sticky lg:top-28">
+        <div className="w-full pl-8 pr-5 sm:pl-12 sm:pr-[34px] lg:sticky lg:top-28 lg:pl-16">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[24%_1fr] lg:gap-x-[10%]">
             <ServiceSidebar
               services={SERVICES}

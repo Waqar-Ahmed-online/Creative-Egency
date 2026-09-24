@@ -18,7 +18,7 @@ export default function Home() {
     <main className="relative min-h-screen overflow-x-clip bg-white text-black">
       <Header />
       <Hero />
-      <RightDock />
+      {/* <RightDock /> */}
       <MarqueeBar />
       <TrustedSection />
       <WhatWeDoSection />
