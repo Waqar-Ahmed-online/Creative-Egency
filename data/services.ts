@@ -1,0 +1,80 @@
+import type { Service } from "@/types";
+import { IMAGES } from "./images";
+
+export const SERVICES: Service[] = [
+  {
+    id: "strait-marketing",
+    number: "01",
+    title: "Strait Marketing",
+    heading: "Paid ads across Google, Meta, TikTok, LinkedIn",
+    bullets: [
+      "Campaign strategy & planning",
+      "Ad creative & copy testing",
+      "Audience targeting & retargeting",
+      "Budget optimization & scaling",
+      "ROAS & CPA optimization",
+    ],
+    image: IMAGES.services.marketing,
+    icon: "bowtie",
+  },
+  {
+    id: "seo-content-growth",
+    number: "02",
+    title: "SEO & Content Growth",
+    heading: "Search visibility that compounds over time",
+    bullets: [
+      "Keyword research & search intent mapping",
+      "On-page SEO optimization",
+      "Content strategy & editorial planning",
+      "Technical SEO audits",
+      "Link building & authority growth",
+    ],
+    image: IMAGES.services.seo,
+    icon: "dotCluster",
+  },
+  {
+    id: "rate-optimization",
+    number: "03",
+    title: "Rate Optimization",
+    heading: "Optimization — turning high-intent traffic into loyal customers",
+    bullets: [
+      "Funnel analysis & user behavior tracking",
+      "Landing page optimization",
+      "A/B testing & experimentation",
+      "UX & messaging refinement",
+      "Conversion tracking setup",
+    ],
+    image: IMAGES.services.optimization,
+    icon: "sparkle",
+  },
+  {
+    id: "marketing-automation",
+    number: "04",
+    title: "Marketing Automation",
+    heading: "Scale campaigns with smart workflows",
+    bullets: [
+      "Email & lifecycle automation",
+      "CRM integration & setup",
+      "Lead scoring & segmentation",
+      "Automated nurturing flows",
+      "Campaign performance triggers",
+    ],
+    image: IMAGES.services.automation,
+    icon: "checker",
+  },
+  {
+    id: "analytics-attribution",
+    number: "05",
+    title: "Analytics & Attribution",
+    heading: "Track what truly drives long-term revenue performance",
+    bullets: [
+      "GA4 & event tracking setup",
+      "Multi-touch attribution modeling",
+      "Dashboard & reporting systems",
+      "Funnel & cohort analysis",
+      "Data-driven optimization insights",
+    ],
+    image: IMAGES.services.analytics,
+    icon: "burst",
+  },
+];
