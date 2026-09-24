@@ -37,28 +37,46 @@ export default function TeamSection() {
         </div>
       </div>
 
-      {/* Team grid — full-bleed, no left/right space */}
-      <div className="mt-10 grid w-full grid-cols-2 lg:grid-cols-4">
-        {TEAM.map((member) => (
-          <div key={member.id} className="group relative aspect-[3/4] w-full overflow-hidden">
-            <CloudImage
-              src={member.image}
-              alt={member.name}
-              fill
-              sizes="(max-width: 1024px) 50vw, 25vw"
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-            />
+      {/* Team cards — rounded + zig-zag (1 & 3 neeche, 2 & 4 upar) */}
+      <div className="relative mt-10">
+        {/* peeche ki halki vertical lines (chahiye na ho to ye div hata do) */}
+        <div className="pointer-events-none absolute inset-0 hidden grid-cols-7 lg:grid">
+          {Array.from({ length: 7 }).map((_, i) => (
+            <div key={i} className="border-l border-black/10" />
+          ))}
+        </div>
 
-            <div className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 transition group-hover:bg-white">
-              <ArrowUpRight className="h-4 w-4" />
-            </div>
+        <div className="relative z-10 grid w-full grid-cols-2 items-start gap-3 px-3 sm:gap-4 sm:px-4 lg:grid-cols-4">
+          {TEAM.map((member, i) => (
+            <div
+              key={member.id}
+              className={`group relative aspect-[3/4] w-full overflow-hidden rounded-3xl ${
+                i % 2 === 0 ? "mt-10 lg:mt-16" : ""
+              }`}
+            >
+              <CloudImage
+                src={member.image}
+                alt={member.name}
+                fill
+                sizes="(max-width: 1024px) 50vw, 25vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
 
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6">
-              <p className="text-xl font-bold text-white sm:text-2xl">{member.name}</p>
-              <p className="text-sm text-white/70 sm:text-base">{member.role}</p>
+              <div className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white text-black transition-colors duration-300 group-hover:bg-black group-hover:text-white">
+                <ArrowUpRight className="h-4 w-4" />
+              </div>
+
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent p-5 pt-24 sm:p-6 sm:pt-28">
+                <p className="text-xl font-semibold text-white sm:text-2xl lg:text-3xl">
+                  {member.name}
+                </p>
+                <p className="mt-1 text-sm text-white/80 sm:text-base">
+                  {member.role}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       {/* Tags row */}
