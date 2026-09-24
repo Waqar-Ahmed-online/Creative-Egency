@@ -31,7 +31,7 @@ export default function CaseStudiesSection() {
       </div>
 
       {/* Cards grid — full-bleed, no left/right space at all */}
-      <div className="mt-10 grid w-full grid-cols-1 sm:grid-cols-2">
+    <div className="mt-10 grid w-full grid-cols-1 gap-x-3 gap-y-8 px-3 sm:grid-cols-2 sm:gap-x-4 sm:gap-y-10 sm:px-4">
         {CASE_STUDIES.map((item) => (
           <CaseStudyCard key={item.id} item={item} />
         ))}

@@ -14,19 +14,21 @@ export default function OurSolutionsSection() {
   return (
     <section className="relative bg-white text-black">
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        {/* Left — full-height image */}
-        <div className="relative h-[420px] w-full sm:h-[560px] lg:h-[860px]">
-          <CloudImage
-            src={SOLUTIONS_IMAGE}
-            alt="City street at night"
-            fill
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover grayscale"
-          />
+        {/* Left — image (top "Our Solutions" text se start, right side curve, left square) */}
+        <div className="relative h-[420px] w-full sm:h-[560px] lg:h-auto lg:min-h-[640px]">
+          <div className="absolute inset-0 overflow-hidden rounded-r-[2rem] lg:inset-y-20 lg:rounded-r-[2.5rem]">
+            <CloudImage
+              src={SOLUTIONS_IMAGE}
+              alt="City street at night"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover grayscale"
+            />
+          </div>
         </div>
 
         {/* Right — content */}
-        <div className="relative flex flex-col justify-center px-6 py-16 sm:px-10 sm:py-20 lg:px-16">
+        <div className="relative flex flex-col justify-center px-6 py-16 sm:px-10 sm:py-20 lg:justify-start lg:px-16">
           <button className="absolute right-6 top-6 hidden items-center gap-2 rounded-full border border-black/10 px-5 py-3 text-sm font-semibold sm:right-10 sm:top-10 lg:flex">
             MENU
             <svg

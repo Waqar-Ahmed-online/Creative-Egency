@@ -12,7 +12,7 @@ export default function TrustedHeading() {
         text={TRUSTED_HEADING}
         className="mt-3 text-2xl font-bold leading-tight sm:text-3xl lg:text-4xl"
       />
-      <div className="relative mt-6 h-60 w-full overflow-hidden rounded-2xl sm:h-64">
+      <div className="relative mt-6 hidden h-60 w-full overflow-hidden rounded-2xl sm:block sm:h-64">
         <CloudImage
           src={IMAGES.trusted.runway}
           alt="Runway shot"
