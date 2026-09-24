@@ -1,6 +1,7 @@
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import RightDock from "@/components/layout/RightDock";
+import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import CaseStudiesSection from "@/components/sections/case-studies/CaseStudiesSection";
 import GrowthProcessSection from "@/components/sections/GrowthProcessSection";
 import Hero from "@/components/sections/Hero";
@@ -19,6 +20,7 @@ export default function Home() {
       <Header />
       <Hero />
       {/* <RightDock /> */}
+      <WhatsAppButton/>
       <MarqueeBar />
       <TrustedSection />
       <WhatWeDoSection />
