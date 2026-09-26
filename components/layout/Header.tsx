@@ -4,10 +4,12 @@ import Image from "next/image";
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import BracketBox from "@/components/ui/BracketBox";
+import GetStartedModal from "@/components/sections/GetStartedModal";
 import { NAV_LINKS } from "@/data/navigation";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [formOpen, setFormOpen] = useState(false);
 
   return (
     <header className="relative z-30 mx-4 mt-4 rounded-2xl border border-black/10 bg-white px-5 py-4 shadow-sm sm:mx-8 sm:px-6 md:mx-12 md:mt-6 md:px-8 md:py-5 lg:mx-16 xl:mx-24">
@@ -31,9 +33,11 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <BracketBox>
-            <span className="text-sm font-semibold">GET STARTED</span>
-          </BracketBox>
+          <button type="button" onClick={() => setFormOpen(true)}>
+            <BracketBox>
+              <span className="text-sm font-semibold">GET STARTED</span>
+            </BracketBox>
+          </button>
         </div>
 
         <button
@@ -56,13 +60,19 @@ export default function Header() {
               <ChevronDown className="h-3.5 w-3.5" />
             </button>
           ))}
-          <div className="pt-2">
+          <button
+            type="button"
+            className="pt-2 text-left"
+            onClick={() => setFormOpen(true)}
+          >
             <BracketBox>
               <span className="text-sm font-semibold">GET STARTED</span>
             </BracketBox>
-          </div>
+          </button>
         </nav>
       )}
+
+      <GetStartedModal isOpen={formOpen} onClose={() => setFormOpen(false)} />
     </header>
   );
 }

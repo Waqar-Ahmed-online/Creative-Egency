@@ -96,3 +96,11 @@ export interface ContactPayload {
   service?: string;
   message: string;
 }
+/* ---------- Get Started form ---------- */
+export interface GetStartedPayload {
+  name: string;
+  email: string;
+  company?: string;
+  service: string;
+  message: string;
+}
